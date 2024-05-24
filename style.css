@@ -1,0 +1,171 @@
+/* Genel yazı tipi ve arka plan ayarları */
+body {
+    font-family: Arial, sans-serif; /* Yazı tipi */
+    background-color: #f0f0f0; /* Arka plan rengi */
+    text-align: center; /* Metin hizalama */
+}
+
+/* Konteyner için üst boşluk */
+.container {
+    margin-top: -65px; /* Daha yukarıya taşımak için azaltıldı */
+}
+
+/* Renk seçici ve renk sonuçları bölümü */
+.color-selector {
+    display: flex; /* Esnek kutu modeli */
+    justify-content: flex-start; /* Sol tarafa hizalama */
+    align-items: flex-start; /* Üstten hizalama */
+    margin-bottom: 20px; /* Alt boşluk */
+    margin-left: -150px; /* Sol boşluk */
+}
+
+/* Araçlar ve renk seçici için stil */
+.tools {
+    display: flex; /* Esnek kutu modeli */
+    flex-direction: column; /* Dikey hizalama */
+    align-items: flex-start; /* Sol tarafa hizalama */
+    margin-left: -100px; /* Araçlar ve renk seçici arasındaki boşluk */
+    margin-top: 60px; /* Üst boşluk */
+    margin-right: 200px; /* Sağ boşluk */
+}
+
+/* Araç butonları için stil */
+.tool-button {
+    background: none; /* Arka plan yok */
+    border: none; /* Kenarlık yok */
+    margin: 5px; /* Dış boşluk */
+    cursor: pointer; /* İşaretçi şekli */
+    display: flex; /* Esnek kutu modeli */
+    align-items: center; /* Dikey hizalama */
+}
+
+.tool-button img {
+    width: 30px; /* Görüntü genişliği */
+    height: 30px; /* Görüntü yüksekliği */
+    margin-right: 5px; /* Sağ boşluk */
+}
+
+/* Araç satırı için stil */
+.tool-row {
+    display: flex; /* Esnek kutu modeli */
+    justify-content: flex-start; /* Sol tarafa hizalama */
+    width: 100%; /* Tam genişlik */
+}
+
+/* Renk butonları için düzenlemeler */
+.color-buttons {
+    display: flex; /* Esnek kutu modeli */
+    flex-direction: column; /* Dikey hizalama */
+    align-items: flex-start; /* Sol tarafa hizalama */
+    margin-left: -70px; /* Sol boşluk */
+    margin-top: 80px; /* Üst boşluk */
+    margin-right: 230px; /* Sağ boşluk */
+    position: relative; /* Göreceli konum */
+}
+
+/* Renk butonları satırı */
+.preset-color-row, .custom-color-row {
+    display: flex; /* Esnek kutu modeli */
+    justify-content: flex-start; /* Sol tarafa hizalama */
+    margin-bottom: 10px; /* Alt boşluk */
+}
+
+/* Artı butonunun konumlandırılması ve büyütülmesi */
+#open-color-picker {
+    position: absolute; /* Mutlak konum */
+    left: -60px; /* Sol boşluk */
+    top: 44%; /* Üstten hizalama */
+    transform: translateY(-50%); /* Y ekseninde ortalama */
+    width: 80px; /* Buton genişliği */
+    height: 90px; /* Buton yüksekliği */
+    font-size: 50px; /* Yazı boyutu */
+    display: flex; /* Esnek kutu modeli */
+    align-items: center; /* Dikey hizalama */
+    justify-content: center; /* Yatay hizalama */
+}
+
+/* Renk butonları ve özel renk butonları için stil */
+.preset-color, .custom-color {
+    width: 30px; /* Buton genişliği */
+    height: 30px; /* Buton yüksekliği */
+    border: 2px solid #aaa2a2; /* Gri kenar rengi */
+    margin: 5px; /* Dış boşluk */
+    cursor: pointer; /* İşaretçi şekli */
+    border-radius: 50%; /* Daire şekli */
+    display: flex; /* Esnek kutu modeli */
+    align-items: center; /* Dikey hizalama */
+    justify-content: center; /* Yatay hizalama */
+    font-size: 16px; /* Yazı boyutu */
+    color: #000; /* Yazı rengi */
+}
+
+/* Özel renk butonları için arka plan rengi */
+.custom-color {
+    background-color: #fff; /* Arka plan rengi beyaz */
+}
+
+/* Renk sonuçları için üst boşluk ve sağ tarafa konumlandırma */
+#color-result {
+    margin-top: 90px; /* Üst boşluk */
+    margin-left: 400px; /* Sol boşluk */
+    margin-right: auto; /* Sağ tarafa hizalama */
+    text-align: left; /* Metin hizalama sol */
+    background-color: #ffffff; /* Arka plan rengi beyaz */
+    padding: 15px; /* İç boşluk */
+    border: 2px solid #b5b5b5; /* Kenar çerçevesi */
+    border-radius: 10px; /* Yuvarlatılmış köşeler */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Hafif gölge */
+    font-family: 'Arial', sans-serif; /* Yazı tipi */
+    max-width: 200px; /* Maksimum genişlik */
+    font-size: 22px; /* Yazı boyutu */
+    font-weight: bold; /* Yazı kalınlığı */
+}
+
+.color-info {
+    margin: 5px 0; /* Üst ve alt boşluk */
+}
+
+.color-hex {
+    /* Renk Hex Kodu - Renk dinamik olarak JavaScript tarafından ayarlanacak */
+}
+
+.color-red {
+    color: #ff0000; /* Kırmızı */
+}
+
+.color-green {
+    color: #0ac90a; /* Yeşil */
+}
+
+.color-blue {
+    color: #0000ff; /* Mavi */
+}
+
+/* Başlık ve içerik stil */
+#color-result h3 {
+    font-size: 18px; /* Başlık boyutu */
+    margin-bottom: 10px; /* Alt boşluk */
+    color: #972cc9; /* Başlık rengi */
+}
+
+#color-result p {
+    font-size: 14px; /* İçerik boyutu */
+    margin: 5px 0; /* Üst ve alt boşluk */
+}
+
+/* Boyama alanı için stil */
+.drawing-area {
+    margin-top: 30px; /* Üst boşluk */
+    width: 90%; /* Genişlik */
+    height: 500px; /* Yükseklik */
+    border: 2px dashed #ccc; /* Kenar çerçevesi */
+    background-color: #fff; /* Arka plan rengi */
+    margin-left: auto; /* Sol boşluk */
+    margin-right: auto; /* Sağ boşluk */
+}
+
+/* Aktif araç için stil */
+.active-tool {
+    border: 2px solid #0000ff; /* Mavi kenarlık aracın aktif olduğunu belirtmek için */
+    border-radius: 5px; /* Yuvarlatılmış köşeler */
+}

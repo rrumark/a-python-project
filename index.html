@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Renk Seçici</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <!-- Renk sonuçları ve araçlar bölümü -->
+        <div class="color-selector">
+            <!-- Seçilen renk bilgisi -->
+            <div id="color-result">
+                <p class="color-info color-hex">Seçilen Renk: #000000</p>
+                <p class="color-info color-red">Kırmızı: 0%</p>
+                <p class="color-info color-green">Yeşil: 0%</p>
+                <p class="color-info color-blue">Mavi: 0%</p>
+            </div>
+            <!-- Araçlar -->
+            <div class="tools">
+                <h2>Araçlar</h2>
+                <div class="tool-row">
+                    <button class="tool-button" id="tool-pencil" title="Kalem">
+                        <img src="{{ url_for('static', filename='icons/pencil.png') }}" alt="Kalem">
+                    </button>
+                    <button class="tool-button" id="tool-highlighter" title="Fosforlu Kalem">
+                        <img src="{{ url_for('static', filename='icons/highlighter.png') }}" alt="Fosforlu Kalem">
+                    </button>
+                </div>
+                <div class="tool-row">
+                    <button class="tool-button" id="tool-fill" title="Dolgu">
+                        <img src="{{ url_for('static', filename='icons/fill.png') }}" alt="Dolgu">
+                    </button>
+                    <button class="tool-button" id="tool-eraser" title="Silgi">
+                        <img src="{{ url_for('static', filename='icons/eraser.png') }}" alt="Silgi">
+                    </button>
+                </div>
+            </div>
+            <!-- Renk butonları -->
+            <div class="color-buttons">
+                <!-- Hazır renkler -->
+                <div class="preset-color-row">
+                    <button class="preset-color" style="background-color: black;" data-color="#000000"></button>
+                    <button class="preset-color" style="background-color: rgb(132, 132, 132);" data-color="#808080"></button>
+                    <button class="preset-color" style="background-color: darkred;" data-color="#8b0000"></button>
+                    <button class="preset-color" style="background-color: rgb(255, 106, 0);" data-color="#ffa500"></button>
+                    <button class="preset-color" style="background-color: darkgreen;" data-color="#006400"></button>
+                    <button class="preset-color" style="background-color: rgb(0, 0, 255);" data-color="#0000ff"></button>
+                    <button class="preset-color" style="background-color: rgb(193, 31, 163);" data-color="#c11fa3"></button>
+                    <button class="preset-color" style="background-color: rgb(50, 0, 85);" data-color="#4b0082"></button>
+                    <button class="preset-color" style="background-color: rgb(0, 50, 136);" data-color="#003288"></button>
+                    <button class="preset-color" style="background-color: rgb(54, 0, 124);" data-color="#003288"></button>
+                </div>
+                <div class="preset-color-row">
+                    <button class="preset-color" style="background-color: white;" data-color="#ffffff"></button>
+                    <button class="preset-color" style="background-color: lightgray;" data-color="#d3d3d3"></button>
+                    <button class="preset-color" style="background-color: red;" data-color="#ff0000"></button>
+                    <button class="preset-color" style="background-color: yellow;" data-color="#ffff00"></button>
+                    <button class="preset-color" style="background-color: rgb(40, 224, 43);" data-color="#28e02b"></button>
+                    <button class="preset-color" style="background-color: rgb(66, 164, 255);" data-color="#42a4ff"></button>
+                    <button class="preset-color" style="background-color: rgb(181, 9, 228);" data-color="#b509e4"></button>
+                    <button class="preset-color" style="background-color: pink;" data-color="#ffc0cb"></button>
+                    <button class="preset-color" style="background-color: rgb(66, 155, 200);" data-color="#429bc8"></button>
+                    <button class="preset-color" style="background-color: rgb(66, 155, 200);" data-color="#429bc8"></button>
+                    <button id="open-color-picker" class="preset-color" style="background-color: #cccccc; width: 40px; height: 40px; font-size: 24px;">+</button>
+                </div>
+                <!-- Özel renk butonları -->
+                <div class="custom-color-row">
+                    <button class="custom-color" id="custom-color-1"></button>
+                    <button class="custom-color" id="custom-color-2"></button>
+                    <button class="custom-color" id="custom-color-3"></button>
+                    <button class="custom-color" id="custom-color-4"></button>
+                    <button class="custom-color" id="custom-color-5"></button>
+                    <button class="custom-color" id="custom-color-6"></button>
+                    <button class="custom-color" id="custom-color-7"></button>
+                    <button class="custom-color" id="custom-color-8"></button>
+                    <button class="custom-color" id="custom-color-9"></button>
+                    <button class="custom-color" id="custom-color-10"></button>
+                </div>
+                <!-- Seçili renk gösterimi -->
+                <button id="current-color-display" class="preset-color" style="background-color: #000000; width: 40px; height: 40px;"></button>
+            </div>
+        </div>
+        <!-- Renk seçici -->
+        <input type="color" id="color-picker" name="color" style="position: absolute; visibility: hidden;">
+        <!-- Boyama alanı -->
+        <div class="drawing-area">
+            <canvas id="drawing-canvas"></canvas>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
