@@ -1,1 +1,1 @@
-# a-python-project
+# paint-project
